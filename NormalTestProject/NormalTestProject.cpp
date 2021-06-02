@@ -14,9 +14,14 @@ void Test3();
 void TestWcsMemCpy();
 void TestStrToUpperLower1();
 void TestStrToUpperLower2();
+void TestAlloc();
 
 int _tmain(int argc, _TCHAR* argv[])
 {
+    _CrtSetDbgFlag(_CRTDBG_LEAK_CHECK_DF | _CRTDBG_ALLOC_MEM_DF);
+
+    TestAlloc();
+
     TestStrToUpperLower1();
     TestStrToUpperLower2();
 
@@ -25,6 +30,13 @@ int _tmain(int argc, _TCHAR* argv[])
     Test2();
 	testChar();*/
 	return 0;
+}
+
+//  2021/6/2
+void TestAlloc()
+{
+    int* nArray = new int[4];
+    float* data = new float();
 }
 
 //  2021/5/22
