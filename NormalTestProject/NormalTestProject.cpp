@@ -6,6 +6,20 @@
 #include <string>
 #include <algorithm>
 
+#include <crtdbg.h>
+
+#ifdef _DEBUG
+#define DEBUG_NEW   new( _CLIENT_BLOCK, __FILE__, __LINE__)
+#else
+#define DEBUG_NEW
+#endif
+
+#define _CRTDBG_MAP_ALLOC
+
+#ifdef _DEBUG
+#define new DEBUG_NEW
+#endif
+
 using namespace std;
 
 void testChar();
